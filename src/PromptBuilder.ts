@@ -30,8 +30,24 @@ class PromptBuilder {
         
         if (params) {
             const inputsString = Object.entries(params)
-                .filter(([_, value]) => value !== undefined && value !== null && value !== '')
-                .map(([key, value]) => `<${key}>${String(value)}</${key}>`)
+                .filter(([_, value]) => {
+                    if (Array.isArray(value)) {
+                        return value.length > 0;
+                    }
+                    if (typeof value === 'object' && value !== null) {
+                        return Object.keys(value).length > 0;
+                    }
+                    return value !== undefined && value !== null && value !== '';
+                })
+                .map(([key, value]) => {
+                    let stringValue: string;
+                    if (Array.isArray(value) || typeof value === 'object') {
+                        stringValue = JSON.stringify(value);
+                    } else {
+                        stringValue = String(value);
+                    }
+                    return `<${key}>${stringValue}</${key}>`;
+                })
                 .join('\n');
             result = result.replace(this.inputsPlaceholder, inputsString);
         } else {
