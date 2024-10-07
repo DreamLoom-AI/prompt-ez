@@ -1,6 +1,6 @@
 {
   "name": "prompt-ez",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An easy-to-use prompt builder for creating structured prompts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
