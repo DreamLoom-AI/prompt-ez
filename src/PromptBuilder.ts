@@ -30,6 +30,7 @@ class PromptBuilder {
         
         if (params) {
             const inputsString = Object.entries(params)
+                .filter(([_, value]) => value !== undefined && value !== null && value !== '')
                 .map(([key, value]) => `<${key}>${String(value)}</${key}>`)
                 .join('\n');
             result = result.replace(this.inputsPlaceholder, inputsString);
