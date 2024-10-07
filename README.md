@@ -16,7 +16,6 @@ The goal of this project is to improve prompt readability and maintainability th
 ## Installation
 
 You can install prompt-ez using npm:
-
 ```bash
 npm install prompt-ez
 ```
@@ -34,16 +33,10 @@ const prompt = new PromptBuilder()
         .text('Please provide accurate and concise information.')
     )
     .tag('task', (b) => b
-        .text('Summarize the following text:')
-        .inputs()
+        .text('Explain the benefits of regular exercise.')
     )
     .tag('output_format', (b) => b
-        .text('Provide a summary in bullet points.')
-        .list([
-            'Use clear and concise language',
-            'Keep each bullet point to one sentence',
-            'Include only the most important information'
-        ])
+        .text('Provide the explanation in a paragraph.')
     )
     .build();
 
@@ -58,14 +51,10 @@ You are a helpful AI assistant.
 Please provide accurate and concise information.
 </system>
 <task>
-Summarize the following text:
-<inputs>{{INPUTS}}</inputs>
+Explain the benefits of regular exercise.
 </task>
 <output_format>
-Provide a summary in bullet points.
-1. Use clear and concise language
-2. Keep each bullet point to one sentence
-3. Include only the most important information
+Provide the explanation in a paragraph.
 </output_format>
 ```
 
