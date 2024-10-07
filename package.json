@@ -1,0 +1,26 @@
+{
+  "name": "prompt-ez",
+  "version": "1.0.1",
+  "description": "An easy-to-use prompt builder for creating structured prompts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "prompt",
+    "builder",
+    "ai",
+    "nlp"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
