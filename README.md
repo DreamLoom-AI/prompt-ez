@@ -3,6 +3,8 @@
 An easy-to-use prompt builder for creating structured prompts in TypeScript.
 The goal of this project is to improve prompt readability and maintainability through a simple interface.
 
+Github: https://github.com/DreamLoom-AI/prompt-ez ![GitHub icon](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
 ## Features
 
 - Structured prompts via tags (converted to XML when built)
