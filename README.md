@@ -4,6 +4,8 @@ An easy-to-use prompt builder for creating structured prompts in TypeScript for 
 
 This project aims to improve prompt readability and maintainability through a simple interface, compatible with various AI models from OpenAI, Anthropic, Google Gemini and more.
 
+This is an implementation that was created to meet [DreamLoom's](https://dreamloom.ai) internal needs, but we decided to open-source it since we think it might be useful for others. Please reach out on GitHub if you have suggestions for improvements or other comments.
+
 [Contribute to the project on Github](https://github.com/DreamLoom-AI/prompt-ez)
 
 ## Features
