@@ -1,7 +1,8 @@
 # prompt-ez
 
-An easy-to-use prompt builder for creating structured prompts in TypeScript.
-The goal of this project is to improve prompt readability and maintainability through a simple interface.
+An easy-to-use prompt builder for creating structured prompts in TypeScript for Large Language Models (LLMs) and AI applications. 
+
+This project aims to improve prompt readability and maintainability through a simple interface, compatible with various AI models from OpenAI, Anthropic, Google Gemini and more.
 
 [Contribute to the project on Github](https://github.com/DreamLoom-AI/prompt-ez)
 
@@ -12,6 +13,19 @@ The goal of this project is to improve prompt readability and maintainability th
 - Supports nested tags
 - Simple methods for text and list insertion
 - Dynamic input handling
+- Optimized for LLM interactions and AI-powered applications
+- Compatible with popular AI models from OpenAI, Anthropic, Google Gemini and more
+- Follows Anthropic's preferred XML-based prompt structure
+
+## Why XML-based prompts?
+
+This project uses XML-based prompts, which is the preferred structure by Anthropic for their Claude AI model. According to [Anthropic's documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags), using XML tags in prompts can help:
+
+- Clearly separate different parts of the prompt
+- Provide structure and context to the AI model
+- Improve the model's understanding and response quality
+
+While designed with Anthropic's Claude in mind, this structure can also be beneficial when working with other LLMs and AI models since it allows for a clear and structured approach to prompt engineering.
 
 ## Installation
 
