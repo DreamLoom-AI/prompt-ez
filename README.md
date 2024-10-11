@@ -68,6 +68,9 @@ The `PromptBuilder` class is the main interface for creating structured prompts.
     - Filters out empty arrays, empty objects, null, undefined, and empty string values
   - Returns: The complete prompt as a string, with dynamic inputs inserted as XML tags.
 
+
+---
+
 ### Example 1: Basic Prompt Creation
 
 Here's a simple example of creating a structured prompt:
