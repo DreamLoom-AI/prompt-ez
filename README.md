@@ -39,22 +39,51 @@ Install prompt-ez using npm:
 
 ## Usage
 
+### PromptBuilder Class
+
+The `PromptBuilder` class is the main interface for creating structured prompts. Here's a quick overview of its methods:
+
+- `tag(name: string, contentFn?: (builder: PromptBuilder) => void): PromptBuilder`
+  - Creates an XML-like tag in the prompt.
+  - `name`: The name of the tag.
+  - `contentFn`: Optional function to add content inside the tag.
+  - Returns: The PromptBuilder instance for chaining.
+
+- `text(text: string): PromptBuilder`
+  - Adds plain text to the prompt.
+  - Returns: The PromptBuilder instance for chaining.
+
+- `list(items: string[]): PromptBuilder`
+  - Creates a numbered list in the prompt.
+  - Returns: The PromptBuilder instance for chaining.
+
+- `inputs(): PromptBuilder`
+  - Adds a placeholder for dynamic inputs.
+  - Returns: The PromptBuilder instance for chaining.
+- `build(params?: Record<string, unknown>): string`
+  - Builds the final prompt string.
+  - `params`: Optional object with key-value pairs for dynamic inputs.
+    - Supports primitive values (string, number, boolean)
+    - Handles arrays and objects by converting them to JSON strings
+    - Filters out empty arrays, empty objects, null, undefined, and empty string values
+  - Returns: The complete prompt as a string, with dynamic inputs inserted as XML tags.
+
 ### Example 1: Basic Prompt Creation
 
-Here's a simple example of how to use the `PromptBuilder` to create a structured prompt:
+Here's a simple example of creating a structured prompt:
 
   ```typescript
   import PromptBuilder from 'prompt-ez';
 
   const prompt = new PromptBuilder()
-    .tag('system', (b) => b
+    .tag('system', b => b
       .text('You are a helpful AI assistant.')
       .text('Please provide accurate and concise information.')
     )
-    .tag('task', (b) => b
+    .tag('task', b => b
       .text('Explain the benefits of regular exercise.')
     )
-    .tag('output_format', (b) => b
+    .tag('output_format', b => b
       .text('Provide the explanation in a paragraph.')
     )
     .build();
@@ -62,7 +91,7 @@ Here's a simple example of how to use the `PromptBuilder` to create a structured
   console.log(prompt);
   ```
 
-This will generate the following prompt:
+This generates the following prompt:
 
   ```xml
   <system>
@@ -77,16 +106,16 @@ This will generate the following prompt:
   </output_format>
   ```
 
-### Example 2: Dynamic Inputs
+### Example 2: Using Dynamic Inputs
 
-Here's an example demonstrating how to use dynamic inputs in your prompts:
+Here's how to use dynamic inputs in your prompts:
 
   ```typescript
   const promptWithInputs = new PromptBuilder()
-    .tag('system', (b) => b
+    .tag('system', b => b
       .text('You are a language translator.')
     )
-    .tag('task', (b) => b
+    .tag('task', b => b
       .text('Translate the following text:')
       .inputs()
     )
@@ -99,7 +128,7 @@ Here's an example demonstrating how to use dynamic inputs in your prompts:
   console.log(promptWithInputs);
   ```
 
-This will produce the following prompt:
+This produces:
 
   ```xml
   <system>
