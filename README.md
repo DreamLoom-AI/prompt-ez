@@ -2,7 +2,7 @@
 
 An easy-to-use prompt builder for creating structured prompts in TypeScript for Large Language Models (LLMs) and AI applications.
 
-This project aims to improve prompt readability and maintainability through a simple interface, compatible with various AI models from OpenAI, Anthropic, Google Gemini, and more.
+This project aims to improve prompt readability and maintainability through a simple interface, compatible with various AI models from OpenAI, Anthropic, Google Gemini, and more. It also uses an XML-based prompt structure recommended by Anthropic to improve prompt quality and model understanding.
 
 Originally developed to meet [DreamLoom's](https://dreamloom.ai) internal needs, we've open-sourced it to benefit the wider community. We welcome your suggestions for improvements and other feedback on GitHub.
 
@@ -27,7 +27,7 @@ This project utilizes XML-based prompts, which is the preferred structure for An
 - Enhanced structure and context for the AI model
 - Improved model understanding and response quality
 
-While designed with Anthropic's Claude in mind, this structured approach to prompt engineering can be beneficial when working with other LLMs and AI models as well.
+While recommended by Anthropic for Claude, this structured approach to prompt engineering can be extremely beneficial when working with other LLMs and AI models as well, helping the models understand and respond better to your prompts, making them more accurate and useful.
 
 ## Installation
 
