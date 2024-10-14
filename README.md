@@ -1,5 +1,11 @@
 # prompt-ez
 
+![NPM Downloads](https://img.shields.io/npm/dt/prompt-ez.svg)
+![NPM Version](https://img.shields.io/npm/v/prompt-ez.svg)
+![License](https://img.shields.io/npm/l/prompt-ez.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Made with Love](https://img.shields.io/badge/Made%20with-Love-ff69b4.svg)
+
 An easy-to-use prompt builder for creating structured prompts in TypeScript for Large Language Models (LLMs) and AI applications.
 
 This project aims to improve prompt readability and maintainability through a simple interface, compatible with various AI models from OpenAI, Anthropic, Google Gemini, and more. It also uses an XML-based prompt structure recommended by Anthropic to improve prompt quality and model understanding.
