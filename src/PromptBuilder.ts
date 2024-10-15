@@ -1,6 +1,7 @@
 class PromptBuilder {
     private readonly content: string[] = [];
     private inputsPlaceholder: string = '';
+    private hasInputs: boolean = false;
 
     public tag(name: string, contentFn?: (builder: PromptBuilder) => void): PromptBuilder {
         this.content.push(`<${name}>`);
@@ -22,10 +23,15 @@ class PromptBuilder {
     public inputs(): PromptBuilder {
         this.inputsPlaceholder = '<inputs>{{INPUTS}}</inputs>';
         this.content.push(this.inputsPlaceholder);
+        this.hasInputs = true;
         return this;
     }
 
     public build(params?: Record<string, unknown>): string {
+        if (params && !this.hasInputs) {
+            throw new Error('Inputs were provided but inputs() was not called in the prompt builder.');
+        }
+
         let result = this.content.join('\n');
         
         if (params) {
