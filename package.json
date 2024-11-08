@@ -12,7 +12,7 @@
     "prompt",
     "builder",
     "ai",
-    "nlp",
+    "nlp", 
     "structured-prompts",
     "prompt-engineering",
     "language-model",
@@ -30,17 +30,13 @@
     "chatgpt",
     "prompt-engineering"
   ],
-  "author": "Your Name",
+  "author": "DreamLoom",
   "license": "MIT",
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "typescript": "^5.6.3"
   },
   "files": [
     "dist",
     "README.md"
-  ],
-  "dependencies": {
-    "jest": "^29.7.0"
-  }
+  ]
 }
