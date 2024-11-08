@@ -239,10 +239,6 @@ This will generate a complex, structured prompt for an AI medical diagnosis scen
   </medical_diagnosis_prompt>
   ```
 
-### Advanced Usage
-
-For more advanced usage examples, including nested tags, list creation, and complex prompt structures, please refer to our [documentation](https://github.com/DreamLoom-AI/prompt-ez/wiki).
-
 ## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details on how to get started.
